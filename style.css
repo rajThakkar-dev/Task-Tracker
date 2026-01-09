@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 50px auto 20px;
+    padding: 40px 20px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+    min-width: 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e63a2a;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    gap: 12px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    flex-shrink: 0;
+}
+
+ul li.checked .task-text {
+    text-decoration: line-through;
+}
+
+ul li.checked span:last-child {
+    text-decoration: none;
+}
+
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+.task-text {
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+}
+
+.status {
+    display: inline-block;
+    padding: 0 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    width: fit-content;
+    flex-shrink: 0;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+ul li span {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear {
+    margin-top: 20px;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .todo-app {
+        margin: 20px auto;
+        padding: 30px 15px 60px;
+    }
+
+    .todo-app h2 {
+        font-size: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        padding-left: 0;
+        padding: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    ul li {
+        padding: 12px 8px 12px 45px;
+        font-size: 15px;
+        gap: 8px;
+    }
+
+    ul li::before {
+        width: 24px;
+        height: 24px;
+    }
+
+    ul li span {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        line-height: 35px;
+    }
+
+    .status {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .todo-app {
+        padding: 20px 10px 50px;
+    }
+
+    .todo-app h2 {
+        font-size: 18px;
+    }
+
+    .status {
+        font-size: 9px;
+        padding: 2px 6px;
+    }
+
+    ul li {
+        padding: 10px 8px 10px 40px;
+        font-size: 14px;
+    }
+}
