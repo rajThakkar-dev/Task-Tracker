@@ -9,5 +9,7 @@ A simple task tracker built using HTML, CSS, and JavaScript.
 - LocalStorage support
 - Responsive design
 
-## Live Demo
-Open index.html in your browser
+## Tech-Stack User
+-HTML
+-CSS
+-JavaScript
