@@ -10,6 +10,6 @@ A simple task tracker built using HTML, CSS, and JavaScript.
 - Responsive design
 
 ## Tech-Stack User
--HTML
--CSS
--JavaScript
+- HTML
+- CSS
+- JavaScript
